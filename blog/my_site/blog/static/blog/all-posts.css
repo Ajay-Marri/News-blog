@@ -1,0 +1,53 @@
+body{
+    background-color: #390281;
+}
+
+#main-navigation{
+    position: relative;
+    background: linear-gradient(to right top, #6305dd, #390281);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+#main-navigation a {
+  text-decoration: none;
+  color: #cf79f1;
+  font-weight: bold;
+}
+
+#main-navigation a:hover,
+#main-navigation a:active {
+  color: white;
+}
+
+#all-posts{
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 60rem;
+}
+
+#all-posts h2{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin: 3rem 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(17rem, 1fr));
+    gap:1.5rem;
+}
+.post img{
+    width: 7 rem;
+    height: 7 rem;
+}
+
+.post a{
+    height: 22rem;
+  transform-origin: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background-color: white;
+}

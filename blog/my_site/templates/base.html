@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    {% block css_files %}{% endblock %}
+</head>
+<body>
+    <header id="main-navigation">
+        <h1><a href="{% url "dashboard" %}">Aj' Blog</a></h1>
+        <nav>
+            <h1><a href="{% url "posts" %}">All News Updates</a></h1>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <!-- ✅ Move footer outside content block so it appears on every page -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 NewBlog. All rights reserved.</p>
+            
+            <nav>
+                <a href="/about/">About</a> |
+                <a href="/contact/">Contact</a> |
+                <a href="/privacy-policy/">Privacy Policy</a> |
+                <a href="/terms/">Terms of Use</a>
+            </nav>
+            
+            <p>Follow us on:
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> •
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a> •
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </p>
+            
+            <p class="footer-tagline">Fresh takes. Fast updates. Your voice in every post.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
